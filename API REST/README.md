@@ -40,7 +40,7 @@ Este servicio permite gestionar reservaciones de habitaciones, incluyendo la cre
    ```
 
 El servicio estará disponible en:  
-`http://localhost:5001/api`
+`http://localhost:5001`
 
 ## Uso
 Consulta la sección de pruebas para ejemplos de solicitudes y respuestas API. Asegúrate de que la base de datos esté poblada con los datos dados en el archivo database.sql.
@@ -48,7 +48,7 @@ Consulta la sección de pruebas para ejemplos de solicitudes y respuestas API. A
 ## Endpoints
 
 ### **1. Crear una Reservación**
-**POST /api/reservations**
+**POST /reservations**
 
 **Descripción:** Crea una nueva reservación verificando la disponibilidad a través del servicio SOAP.
 
@@ -73,7 +73,7 @@ Consulta la sección de pruebas para ejemplos de solicitudes y respuestas API. A
 ---
 
 ### **2. Consultar una Reservación**
-**GET /api/reservations/<reservation_id>**
+**GET /reservations/<reservation_id>**
 
 **Descripción:** Recupera los detalles de una reservación por su ID.
 
@@ -92,7 +92,7 @@ Consulta la sección de pruebas para ejemplos de solicitudes y respuestas API. A
 ---
 
 ### **3. Cancelar una Reservación**
-**DELETE /api/reservations/<reservation_id>**
+**DELETE /reservations/<reservation_id>**
 
 **Descripción:** Cancela una reservación existente por su ID.
 
