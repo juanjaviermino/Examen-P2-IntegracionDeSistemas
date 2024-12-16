@@ -26,7 +26,7 @@ Los sistemas de gestión hotelera suelen estar centralizados y acoplados, lo que
 - **Endpoints:**
   - `POST /availability`: Verifica disponibilidad para un rango de fechas y tipo de habitación.
 
-[Consulta el README del Servicio SOAP para más detalles.](./soap_service/README.md)
+[Consulta el README del Servicio SOAP para más detalles.](./SOAP/README.md)
 
 ---
 
@@ -39,7 +39,7 @@ Los sistemas de gestión hotelera suelen estar centralizados y acoplados, lo que
   - `GET /reservations/<reservation_id>`: Consulta una reserva específica.
   - `DELETE /reservations/<reservation_id>`: Cancela una reserva existente.
 
-[Consulta el README de la API REST para más detalles.](./api_rest/README.md)
+[Consulta el README de la API REST para más detalles.](./API%20REST/README.md)
 
 ---
 
@@ -51,38 +51,33 @@ Los sistemas de gestión hotelera suelen estar centralizados y acoplados, lo que
   - `POST /rooms`: Registra una nueva habitación.
   - `PATCH /rooms/<room_id>`: Actualiza el estado de una habitación existente.
 
-[Consulta el README del Microservicio para más detalles.](./microservice/README.md)
+[Consulta el README del Microservicio para más detalles.](./MICROSERVICE/README.md)
 
 ---
 
 ## **Estructura del Proyecto**
 ```
 .
-├── soap_service/
+├── SOAP/
 │   ├── app/
-│   ├── Dockerfile
 │   ├── requirements.txt
 │   ├── database.sql
 │   └── README.md
-├── api_rest/
+├── API REST/
 │   ├── app/
-│   ├── Dockerfile
 │   ├── requirements.txt
 │   ├── database.sql
 │   └── README.md
-├── microservice/
+├── MICROSERVICE/
 │   ├── app/
-│   ├── Dockerfile
 │   ├── requirements.txt
 │   ├── database.sql
 │   └── README.md
-└── docker-compose.yml
 ```
 
 ## **Instalación y Despliegue**
 
 ### **Requisitos Previos**
-- Docker y Docker Compose instalados.
 - PostgreSQL configurado para cada servicio.
 
 ### **Pasos para la Instalación**
@@ -105,11 +100,6 @@ Los sistemas de gestión hotelera suelen estar centralizados y acoplados, lo que
    DB_PASSWORD=<contraseña_de_la_bdd>
    ```
 
-4. **Construye y ejecuta los contenedores:**
-   ```bash
-   docker-compose up --build
-   ```
-
 ### **Acceso a los Servicios**
 - **Servicio SOAP:** `http://localhost:5000`
 - **API REST:** `http://localhost:5001`
@@ -117,9 +107,9 @@ Los sistemas de gestión hotelera suelen estar centralizados y acoplados, lo que
 
 ## **Pruebas**
 Consulta los archivos de pruebas correspondientes en cada directorio de servicio:
-- [Pruebas del Servicio SOAP](./soap_service/pruebas.md)
-- [Pruebas de la API REST](./api_rest/pruebas.md)
-- [Pruebas del Microservicio](./microservice/pruebas.md)
+- [Pruebas del Servicio SOAP](./SOAP/pruebas/pruebas.md)
+- [Pruebas de la API REST](./API%20REST/pruebas/pruebas.md)
+- [Pruebas del Microservicio](./MICROSERVICE/pruebas/pruebas.md)
 
 ## **Conclusión**
 Este proyecto demuestra cómo implementar un sistema distribuido basado en microservicios para la gestión hotelera, resolviendo problemas comunes de escalabilidad y mantenimiento. Si tienes preguntas o necesitas soporte, no dudes en contactarme.
